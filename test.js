@@ -20,6 +20,9 @@
 //   }
 //   invertCase('heLLO');
 
+// const { capitalize } = require("lodash");
+import _ from "lodash";
+
 // const { isArray } = require("lodash");
 
 // const { indexOf } = require("lodash");
@@ -637,21 +640,151 @@
 // console.log(getMax([1, 10, 8]));
 
 
-function flatten (array) {
-  if (array === []) return array;
+// function flatten (array) {
+//   if (array === []) return array;
 
-  let result = [];
+//   let result = [];
   
-  for (let i = 0; i < array.length; i++){
-    if (typeof(array[i]) === 'object') {
-      const [...innerArray] = array[i];
-      result = [...result, ...innerArray]
-    }
-    else {
-      result.push(array[i]);
-    }
-  }
-  console.log(result);
-}
+//   for (let i = 0; i < array.length; i++){
+//     if (typeof(array[i]) === 'object') {
+//       const [...innerArray] = array[i];
+//       result = [...result, ...innerArray]
+//     }
+//     else {
+//       result.push(array[i]);
+//     }
+//   }
+//   console.log(result);
+// }
 
-flatten([1, [2, 4], "3"])
+// flatten([1, [2, 4], "3"])
+
+
+// for (let i = 0; i < 10; ++i){
+//   console.log(i);
+// }
+
+
+// function normalise(data) {
+//   data.name = _.capitalize(data.name);
+//   data.description = data.description.toLowerCase();
+// }
+
+// const lesson = {
+//   name: 'деструКТУРИЗАЦИЯ',
+//   description: 'каК удивитЬ друзей',
+// };
+
+// normalise(lesson);
+
+// const company1 = { name: 'Hexlet', state: 'moderating', website: 'https://hexlet.io' };
+// const company2 = { name: 'CodeBasics', state: 'published', website: 'https://code-basics.com' };
+// is(company1, company2); // false
+
+// function isEqual(obj, obj2) {
+//   if ((obj.name === obj2.name) && (obj.state === obj2.state) && (obj.website === obj2.website)) return true;
+//   return false;
+// }
+
+// export default function getDomainInfo(url) {
+//   const result = {};
+
+//   const parts = url.split('://');
+  
+//   if (url.startsWith('https')) result.scheme = 'https';
+//   else result.scheme = 'http';
+
+//   result.name = parts.at(-1);
+//   return result;
+// }
+
+// console.log(getDomainInfo('https://hexlet.io'));
+// getDomainInfo('yandex.ru')
+// {
+//   scheme: 'http',
+//   name: 'yandex.ru',
+// }
+
+// function countWords (sentence) {
+// const result = {};
+
+// sentence = sentence.toLowerCase();
+// const array = _.words(sentence)
+
+// for (let i = 0; i < array.length; i++){
+//   if (Object.hasOwn(result, array[i])) result[array[i]] += 1;
+//   else result[array[i]] = 1;
+// }
+
+// return result;
+// }
+
+// const text2 = 'another one sentence with strange Words words';
+
+// console.log(countWords(text2));
+
+
+
+// function pick (data, keywords) {
+//   const result = {};
+//   const entry = Object.entries(data);
+
+//   for (let i = 0; i < entry.length; i++){
+//     const [key, value] = entry[i];
+//     if (keywords.includes(key)) result[key] = value; 
+//   }
+
+//   return result;
+// }
+
+// const data = {
+//   user: 'ubuntu',
+//   os: 'linux',
+// };
+ 
+// console.log(pick(data, ['os', 'user']));
+// // console.log(Object.keys(pick(data, ['none'])).length);
+//  // { user: 'ubuntu' }
+
+// function get (obj, path) {
+//   let result = obj;
+//   for (let i = 0; i < path.length; i++){
+//     result = result?.[String(path[i])];
+//   }
+//   return result ?? null;
+// }
+
+// const data = {
+//   user: 'ubuntu',
+//   hosts: {
+//     0: {
+//       name: 'web1',
+//     },
+//     1: {
+//       name: 'web2',
+//       null: 3,
+//       active: false,
+//       company: {
+//         name: 'hexlet',
+//       },
+//     },
+//   },
+// }
+// const a = ['hosts']['0'];
+// console.log(data[a]);
+//  console.log(get(data, [null]));
+//  console.log(get(data, ['user']));
+//  console.log(get(data, ['user', 'ubuntu']));
+//  console.log(get(data, ['hosts', 1, 'name']));
+//  console.log(get(data, ['hosts', 0]));
+//  console.log(get(data, ['hosts', 1, null]));
+//  console.log(get(data, ['hosts', 1, 'active']));
+//  console.log(get(data, ['user', 'name', 'name']));
+; // null
+; // 'ubuntu'
+; // null
+; // 'web2'
+; // { name: 'web1' }
+; // 3
+; // false
+

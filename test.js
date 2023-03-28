@@ -21,7 +21,7 @@
 //   invertCase('heLLO');
 
 // const { capitalize } = require("lodash");
-import _ from "lodash";
+// import _, { unset } from "lodash";
 
 // const { isArray } = require("lodash");
 
@@ -788,3 +788,89 @@ import _ from "lodash";
 ; // 3
 ; // false
 
+
+
+
+// function fill (object, keysToChange, newDate) {
+//   if (keysToChange.length === 0) keysToChange = Object.keys(newDate);
+//   const filtredNewData = _.pick(newDate, keysToChange);
+
+//   _.merge(object, filtredNewData);
+// }
+
+
+// const company = {
+//   name: null,
+//   state: 'moderating',
+// };
+ 
+// const data = {
+//   name: 'Hexlet',
+//   state: 'published',
+// };
+
+// fill(company, [], data);
+// console.log(company);
+// // {
+// //   name: 'Hexlet',
+// //   state: 'moderating',
+// // }
+
+
+// function cloneShallow (data) {
+//   const result = {};
+//   const keys = Object.keys(data);
+
+//   for (const key of keys) {
+//     result[key] = data[key];
+//   }
+//   return result;
+// }
+
+// const data = {
+//   key: 'value',
+//   key2: {
+//     key: 'innerValue',
+//     innerKey: {
+//       anotherKey: 'anotherValue',
+//     },
+//   },
+// };
+ 
+// // result имеет такую же структуру, как и data
+// const result = cloneShallow(data);
+// console.log(result);
+
+
+// function make (name, data = {}) {
+//   const result = {name, state: 'moderating', createdAt: Date.now(), ...data};
+//   return result;
+// }
+
+// const company = make('Hexlet');
+// // {
+// //   name: 'Hexlet',
+// //   state: 'moderating',
+// //   createdAt: <тут текущая дата>
+// // }
+// console.log(company);
+
+function getSortedNames (users) {
+  const names = [];
+  for (const user of users) {
+    const { name } = user;
+    names.push(name);
+  }
+  names.sort();
+  return names;
+}
+
+
+const users = [
+  { name: 'Bronn', gender: 'male', birthday: '1973-03-23' },
+  { name: 'Reigar', gender: 'male', birthday: '1973-11-03' },
+  { name: 'Eiegon', gender: 'male', birthday: '1963-11-03' },
+  { name: 'Sansa', gender: 'female', birthday: '2012-11-03' },
+];
+ console.log(getSortedNames(users));
+;

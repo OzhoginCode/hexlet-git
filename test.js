@@ -21,7 +21,7 @@
 //   invertCase('heLLO');
 
 // const { capitalize } = require("lodash");
-// import _, { unset } from "lodash";
+import _ from "lodash";
 
 // const { isArray } = require("lodash");
 
@@ -855,22 +855,585 @@
 // // }
 // console.log(company);
 
-function getSortedNames (users) {
-  const names = [];
-  for (const user of users) {
-    const { name } = user;
-    names.push(name);
-  }
-  names.sort();
-  return names;
+// function getSortedNames (users) {
+//   const names = [];
+//   for (const user of users) {
+//     const { name } = user;
+//     names.push(name);
+//   }
+//   names.sort();
+//   return names;
+// }
+
+
+// const users = [
+//   { name: 'Bronn', gender: 'male', birthday: '1973-03-23' },
+//   { name: 'Reigar', gender: 'male', birthday: '1973-11-03' },
+//   { name: 'Eiegon', gender: 'male', birthday: '1963-11-03' },
+//   { name: 'Sansa', gender: 'female', birthday: '2012-11-03' },
+// ];
+//  console.log(getSortedNames(users));
+
+
+
+
+// import { bstr, buf, str } from "crc-32";
+
+// function make() {
+//   return [];
+// }
+
+// function set(map, key, value) {
+//   const hash = str(key);
+//   const index = Math.abs(hash) % 1000;
+//   if (map[index] !== undefined) {
+//     if (map[index][0] === key) {
+//       map[index] = [key, value];
+//       return true;
+//     }
+//     return false;
+//   }
+//   map[index] = [key, value];
+//   return true;
+// }
+
+// function get(map, key, defaultValue = null) {
+//   const hash = str(key);
+//   const index = Math.abs(hash) % 1000;
+//   if (map[index] !== undefined) {
+//     if (map[index][0] === key) {
+//       return map[index][1];
+//     }
+//   } 
+//   return defaultValue;
+// }
+
+
+// const map = make();
+// // let result = get(map, 'key');
+// // console.log(result); // => null
+ 
+// // result = get(map, 'key', 'default_value');
+// // console.log(result); // => "default_value"
+ 
+// // set(map, 'key2', 'value2');
+// // result = get(map, 'key2');
+// // console.log(result); // => "value2"
+
+// set(map, 'key2', 'another value');
+// const result5 = get(map, 'key2');
+// console.log(result5);
+
+
+// for (let i = 0; i < 110; i++){
+//   console.log(Date.now());
+// }
+
+
+// function isPrime(num) {
+//   if (num < 2) return false;
+//   for (let i = 2; i < num; i++){
+//     if (num % i === 0) return false; 
+//   }
+//   return true;
+
+// }
+
+
+// const sayPrimeOrNot = (num) => isPrime(num) ? console.log('yes') : console.log('no');
+
+// console.log(isPrime(2));
+// console.log(isPrime(3));
+// console.log(isPrime(4));
+// console.log(isPrime(5));
+// console.log(isPrime(6));
+// console.log(isPrime(17));
+// console.log(isPrime(19));
+// console.log(isPrime(2124679));
+// // 2, 3, 5, 7, 11, 13, 17, 19, 23,
+
+// console.log(Math.sqrt(3));
+
+// let count = 0;
+// for (let i = 1000000; i < 1010000; i++){
+//   if (isPrime(i)) count++;
+// }
+// console.log(count);
+
+// function getAverage(...nums) {
+//   if (nums.length === 0) return null;
+//   const sumOfElements = _.sum(nums);
+//   return sumOfElements / nums.length;
+// }
+// // const getAverage = (...nums) => _.sum(nums) / nums.length;
+
+// console.log(getAverage(-3, 4, 2, 10));
+
+
+
+// function convert(...arrays) {
+//   const result = [];
+  
+//   for (let i = 0; i < arrays.length; i++){
+//     // arrays[i][1] += 1;
+//     const date = new Date(...arrays[i]);
+//     console.log(...arrays[i]);
+//     result.push(date.toDateString());
+//   }
+//   return result;
+// }
+
+// console.log(convert([1993, 3, 24], [1997, 8, 12], [2001, 11, 18]));
+// // console.log(convert([1993, 3, 24]));
+// // console.log(convert([1993, 3, 24], [1997, 8, 12], [2001, 10, 18])
+// // ['Sat Apr 24 1993', 'Fri Sep 12 1997', 'Sun Nov 18 2001']
+// // );
+
+
+
+
+// function takeLast(text, count) {
+//   if (text.length < count) return null;
+//   let result = '';
+//   for (let i = 0; i < count; i++){
+//     result = result + text[text.length - 1 - i];
+//   }
+//   return result;
+// }
+
+// console.log(takeLast('text', 4));
+
+// function takeOldest(users, count = 1) {
+// //  const sortedUsers = _.sortBy(users, [function (user) {return Date.parse(user.birthday)}]);
+//  const sortedUsers = _.sortBy(users, [(user) => Date.parse(user.birthday)]);
+//  const result = [];
+//  for (let i = 0; i < count; i++){
+//   result.push(sortedUsers[i]);
+//  }
+//  return result;
+// }
+
+
+// const users = [
+//   { name: 'Tirion', birthday: 'Nov 19, 1988' },
+//   { name: 'Sam', birthday: 'Nov 22, 1999' },
+//   { name: 'Rob', birthday: 'Jan 11, 1975' },
+//   { name: 'Sansa', birthday: 'Mar 20, 2001' },
+//   { name: 'Tisha', birthday: 'Feb 27, 1992' },
+//   { name: 'Chris', birthday: 'Dec 25, 1995' },
+// ];
+
+// console.log(takeOldest(users, 3));
+
+
+// console.log(Array);
+
+// function getChildren(children) {
+//   return children.map((child) => child.children).flat();
+// }
+
+ 
+// const users = [
+//   {
+//     name: 'Tirion',
+//     children: [
+//       { name: 'Mira', birthday: '1983-03-23' },
+//     ],
+//   },
+//   { name: 'Bronn', children: [] },
+//   {
+//     name: 'Sam',
+//     children: [
+//       { name: 'Aria', birthday: '2012-11-03' },
+//       { name: 'Keit', birthday: '1933-05-14' },
+//     ],
+//   },
+//   {
+//     name: 'Rob',
+//     children: [
+//       { name: 'Tisha', birthday: '2012-11-03' },
+//     ],
+//   },
+// ];
+ 
+// console.log(getChildren(users));
+
+
+
+// function getGirlFriends(users) {
+//   const listOfFriend = users.map((user) => user.friends).flat();
+//   return listOfFriend.filter((friend) => friend.gender === 'female');
+// }
+
+// const users = [
+//   {
+//     name: 'Tirion',
+//     friends: [
+//       { name: 'Mira', gender: 'female' },
+//       { name: 'Ramsey', gender: 'male' },
+//     ],
+//   },
+//   { name: 'Bronn', friends: [] },
+//   {
+//     name: 'Sam',
+//     friends: [
+//       { name: 'Aria', gender: 'female' },
+//       { name: 'Keit', gender: 'female' },
+//     ],
+//   },
+//   {
+//     name: 'Rob',
+//     friends: [
+//       { name: 'Taywin', gender: 'male' },
+//     ],
+//   },
+// ];
+ 
+// getGirlFriends(users);
+
+// console.log(getGirlFriends(users));
+
+
+
+// function groupBy(array, key) {
+//   const result = {};
+//   function cb(acc, element) {
+//     if (!Object.hasOwn(acc, element[key])) {
+//       acc[element[key]] = [element];
+//     }
+//     else {
+//       acc[element[key]].push(element);
+//     }
+//     return acc;
+//   }
+//   array.reduce(cb, result);
+//   return result;
+// }
+
+// const students = [
+//   { name: 'Tirion', class: 'B', mark: 3 },
+//   { name: 'Keit', class: 'A', mark: 3 },
+//   { name: 'Ramsey', class: 'A', mark: 4 },
+// ];
+ 
+// // console.log(groupBy([], ''));
+// console.log(groupBy(students, 'mark'));
+
+
+
+// const freeEmailDomains = [
+//   'gmail.com',
+//   'yandex.ru',
+//   'hotmail.com',
+//   'yahoo.com',
+// ];
+
+// const getFreeDomainsCount = (emails) => emails
+//   .map((email) => email.split('@')[1])
+//   .filter((domain) => freeEmailDomains.includes(domain))
+//   .reduce((acc, elem) => {
+//     Object.hasOwn(acc, elem) ? acc[elem] += 1 : acc[elem] = 1;
+//     return acc;
+//   }, {}
+//   )
+
+// const emails = [
+//   'info@gmail.com',
+//   'info@yandex.ru',
+//   'info@hotmail.com',
+//   'mk@host.com',
+//   'support@hexlet.io',
+//   'key@yandex.ru',
+//   'sergey@gmail.com',
+//   'vovan@gmail.com',
+//   'vovan@hotmail.com',
+// ];
+
+// console.log(getFreeDomainsCount(emails));
+// ;
+// // {
+// //   'gmail.com': 3,
+// //   'yandex.ru': 2,
+// //   'hotmail.com': 2,
+// // };
+
+
+
+// function sequenceSum(begin, end) {
+//   if (begin > end) return NaN;
+//   if (begin === end) return begin;
+//   return begin + sequenceSum(begin + 1, end);
+// }
+
+// console.log(sequenceSum(1, 5));
+
+
+
+
+// function smallestDivisor(n) {
+//   const startNum = 2;
+//   if (n < 2) return 1;
+
+//   const iter = (n, acc) => {
+//     if (n % acc === 0) return acc;
+//     return iter(n, acc + 1); 
+//   }
+
+//   return iter(n, startNum);
+// }
+
+// console.log(smallestDivisor(15)); // 17
+// console.log(smallestDivisor(17)); // 17
+
+
+
+
+// const calculateDistance = (point1, point2) => Math.sqrt(((point2[0] - point1[0]) ** 2) + ((point2[1] - point1[1]) ** 2));
+
+// const point1 = [0, 0];
+// const point2 = [3, 4];
+// console.log(calculateDistance(point1, point2));
+// ; // 5
+
+
+
+
+// function getMidpoint(point1, point2) {
+//   const x = (point1.x + point2.x) / 2;
+//   const y = (point1.y + point2.y) / 2;
+//   return {x, y}
+// }
+
+// const point1 = { x: 0, y: 0 };
+// const point2 = { x: 4, y: 4 };
+// const point3 = getMidpoint(point1, point2);
+// console.log(point3); // => { x: 2, y: 2 };
+
+
+
+
+// const makeDecartPoint = (x, y) => {
+//   const point = { x, y };
+//   return point;
+// };
+
+
+// // const makeSegment = (beginPoint, endPoint) => {beginPoint, endPoint};
+// function makeSegment (beginPoint, endPoint) {
+//   return {beginPoint, endPoint};
+// }
+
+// function getMidpointOfSegment(segment) {
+//   const midForX = (segment.beginPoint.x + segment.endPoint.x) / 2;
+//   const midForY = (segment.beginPoint.y + segment.endPoint.y) / 2;
+//   return [midForX, midForY];
+// }
+
+// const getBeginPoint = (segment) => segment.beginPoint;
+// const getEndPoint = (segment) => segment.endPoint;
+
+
+// const beginPoint = makeDecartPoint(3, 2);
+// const endPoint = makeDecartPoint(0, 0);
+// const segment = makeSegment(beginPoint, endPoint);
+
+// console.log(segment);
+
+// console.log(getMidpointOfSegment(segment));
+
+
+
+
+// const makePoint = (x, y) => {
+//   const point = {
+//     angle: Math.atan2(y, x),
+//     radius: Math.sqrt((x ** 2) + (y ** 2)),
+//   };
+
+//   return point;
+// };
+
+// function getX(point) {
+//   const x = Math.round(point.radius * Math.cos(point.angle));
+//   return x;
+// }
+
+// function getY(point) {
+//   const y = Math.round(point.radius * Math.sin(point.angle));
+//   return y;
+// }
+
+
+// const x = 4;
+// const y = 8;
+ 
+// // point хранит в себе данные в полярной системе координат
+// const point = makePoint(x, y);
+ 
+// // Здесь происходит преобразование из полярной в декартову
+// console.log(getX(point));
+// ; // 4
+
+// console.log(getY(point));
+// ; // 8
+
+
+
+
+// const makeDecartPoint = (x, y) => {
+//   const point = { x, y };
+//   return point;
+// };
+
+// const getX = (point) => point.x;
+
+// const getY = (point) => point.y;
+
+// const getQuadrant = (point) => {
+//   const x = getX(point);
+//   const y = getY(point);
+
+//   if (x > 0 && y > 0) {
+//     return 1;
+//   }
+//   if (x < 0 && y > 0) {
+//     return 2;
+//   }
+//   if (x < 0 && y < 0) {
+//     return 3;
+//   }
+//   if (x > 0 && y < 0) {
+//     return 4;
+//   }
+
+//   return null;
+// };
+
+// const makeRectangle = (point, width, height) => ({point, width, height});
+
+// const getStartPoint = (rectangle) => rectangle.point;
+
+// const getWidth = (rectangle) => rectangle.width;
+
+// const getHeight = (rectangle) => rectangle.height;
+
+
+// function containsOrigin(rectangle) {
+//   const getOppositePoint = (rectangle) => {
+//     const startPoint = getStartPoint(rectangle);
+//     const x = getX(startPoint) + getWidth(rectangle);
+//     const y = getY(startPoint) - getHeight(rectangle);
+//     const oppositePoint = makeDecartPoint(x, y);
+//     return oppositePoint;
+//   }
+
+//   if (getQuadrant(getStartPoint(rectangle)) !== 2) return false;
+//   if (getQuadrant(getOppositePoint(rectangle)) !== 4) return false;
+//   return true;
+// }
+
+
+// const p = makeDecartPoint(0, 1);
+// const rectangle = makeRectangle(p, 4, 5);
+
+// // console.log(rectangle);
+ 
+// console.log(containsOrigin(rectangle));
+// // ; // false
+ 
+// const rectangle2 = makeRectangle(makeDecartPoint(-4, 3), 5, 4);
+
+// console.log(containsOrigin(rectangle2));
+// // ; // true
+
+
+// // const frt = (point, width, height) => {point, width, height};
+
+// // console.log(frt());
+
+// const getGcd = (a, b) => ((a % b) ? getGcd(b, a % b) : Math.abs(b));
+
+// const makeRatToNewDenom = (rat, newDenom) => {
+//   const ratio = getDenom(rat) / newDenom;
+//   const newNumer = getNumer(rat) / ratio;
+//   const newRat = {numer: newNumer, denom: newDenom};
+//   return newRat;
+// }
+
+// const bringToCommonDenominator = (rat1, rat2) => {
+//   let newRat1 = rat1;
+//   let newRat2 = rat2;
+//   if (getDenom(rat1) !== getDenom(rat2)) {
+//     const newDenom = getDenom(rat1) * getDenom(rat2);
+//     newRat1 = makeRatToNewDenom(rat1, newDenom);
+//     newRat2 = makeRatToNewDenom(rat2, newDenom);
+//   }
+//   return { newRat1, newRat2 };
+// }
+
+// function normalise(rat) {
+//   let numer = getNumer(rat);
+//   let denom = getDenom(rat);
+//   while (getGcd(numer, denom) !== 1) {
+//     const gcd = getGcd(numer, denom);
+//     numer = numer / gcd;
+//     denom = denom / gcd;
+//   }
+//   return makeRational(numer, denom);
+// }
+
+// function makeRational(numer, denom) {
+//   const rat = { numer, denom };
+//   if (getGcd(rat.numer, rat.denom) !== 1) {
+//     const normalisedRat = normalise(rat);
+//     return normalisedRat;
+//   }
+//   return rat;
+// }
+
+// const getNumer = (rat) => rat.numer;
+
+// const getDenom = (rat) => rat.denom;
+
+// const add = (rat1, rat2) => {
+//   const { newRat1, newRat2 } = bringToCommonDenominator(rat1, rat2);
+
+//   const result = makeRational(getNumer(newRat1) + getNumer(newRat2), getDenom(newRat1));
+//   return result;
+// }
+
+// const sub = (rat1, rat2) => {
+//   const { newRat1, newRat2 } = bringToCommonDenominator(rat1, rat2);
+  
+//   const result = makeRational(getNumer(newRat1) - getNumer(newRat2), getDenom(newRat1));
+//   return result;
+// }
+
+// //tests
+// const rat = makeRational(2, 4);
+// console.log(rat);
+// const rat2 = makeRational(2, 6);
+// console.log(rat2);
+// console.log(getNumer(rat2));
+// console.log(add(rat, rat2));
+// console.log(sub(rat, rat2));
+// // console.log(getGcd(2, 3));
+
+
+
+if (get({1: 2, test: 'test'}, 1, 'eee') !== 2) {
+throw new Error();
 }
 
+if (get({2: 2, test: 'test'}, 1, 'eee') !== 'eee') {
+  throw new Error();
+}
 
-const users = [
-  { name: 'Bronn', gender: 'male', birthday: '1973-03-23' },
-  { name: 'Reigar', gender: 'male', birthday: '1973-11-03' },
-  { name: 'Eiegon', gender: 'male', birthday: '1963-11-03' },
-  { name: 'Sansa', gender: 'female', birthday: '2012-11-03' },
-];
- console.log(getSortedNames(users));
-;
+if (get({1: 2, test: 'test'}, 1) !== 2) {
+  throw new Error();
+}
+
+import {strict as assert} from 'node:assert';
+
+
+assert(get({1: 2, test: 'test'}, 1) === 2);

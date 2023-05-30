@@ -21,7 +21,7 @@
 //   invertCase('heLLO');
 
 // const { capitalize } = require("lodash");
-import _ from "lodash";
+// import _, { remove } from "lodash";
 
 // const { isArray } = require("lodash");
 
@@ -1421,19 +1421,50 @@ import _ from "lodash";
 
 
 
-if (get({1: 2, test: 'test'}, 1, 'eee') !== 2) {
-throw new Error();
-}
+// if (get({1: 2, test: 'test'}, 1, 'eee') !== 2) {
+// throw new Error();
+// }
 
-if (get({2: 2, test: 'test'}, 1, 'eee') !== 'eee') {
-  throw new Error();
-}
+// if (get({2: 2, test: 'test'}, 1, 'eee') !== 'eee') {
+//   throw new Error();
+// }
 
-if (get({1: 2, test: 'test'}, 1) !== 2) {
-  throw new Error();
-}
+// if (get({1: 2, test: 'test'}, 1) !== 2) {
+//   throw new Error();
+// }
 
-import {strict as assert} from 'node:assert';
+// import {strict as assert} from 'node:assert';
 
 
-assert(get({1: 2, test: 'test'}, 1) === 2);
+// assert(get({1: 2, test: 'test'}, 1) === 2);
+
+// const fill = (coll, value, start = 0, end = coll.length) => {
+//   const collLength = coll.length;
+
+//   if (collLength === 0) return coll;
+//   if (start < 0) start = 0;
+//   if (end > coll.length) end = 0;
+
+//   coll[0] = value;
+
+//   console.log(end);
+//   for (let i = start; i < end; i++) {
+//     coll[i] = value;
+//   }
+//   return coll;
+// };
+
+// const coll1 = [0, 1, 2, 3, 4];
+// fill(coll1, '*');
+// console.log(coll1);
+
+
+// function removeFirstLevel(tree) {
+//   const treeWithoutLeafs = tree.filter((elem) => Array.isArray(elem));
+//   console.log(treeWithoutLeafs);
+//   const result = treeWithoutLeafs.flat();
+//   return result;
+// } 
+
+// const tree3 = [[1, [3, 2]], 2, { a: 1 }, [3, 5], 2];
+// console.log(removeFirstLevel(tree3));
